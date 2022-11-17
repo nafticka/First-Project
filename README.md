@@ -8,6 +8,7 @@ After any new submission, a simple explanation for the purpose of the given code
 In folder: "Palindrome"
 Code file: "palindrome.c"
 An attempt to solve the leetcode palindrome number problem. A integer is a palindrome if it is read the same forwards and backwards.
+
 Known problems:
 1. For input 1234567899 the code overflows on leetcode, though personal testing doesn't yield the same issue.
 2. Quite lengthy, will be reduced in the future.
