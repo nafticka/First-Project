@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,14 +10,11 @@ int pow_func(int base, int exp) {
   return power;
 }
 
-int main(int argc, int *argv[]) {
-  int number;
-  scanf("%d", &number);
-
+bool isPalindrome(int number) {
   if (number < 0) {
-    printf("false\n");
+    return false;
   } else if (number == 0) {
-    printf("true\n");
+    return true;
   } else {
     int temp_number, length;
     temp_number = number;
@@ -36,10 +34,22 @@ int main(int argc, int *argv[]) {
     }
 
     if (number == rev_number) {
-      printf("true\n");
+      return true;
     } else {
-      printf("false\n");
+      return false;
     }
   }
+}
+
+int main(int argc, int *argv[]) {
+  int number;
+  scanf("%d", &number);
+
+  if (isPalindrome(number)) {
+    printf("%d is a palindrome.", number);
+  } else {
+    printf("%d is not a palindrome.", number);
+  }
+
   return 0;
 }
